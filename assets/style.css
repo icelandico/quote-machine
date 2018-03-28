@@ -1,27 +1,42 @@
 body {
-    background-color: ghostwhite;
+    background-color: #eeeeee;
     margin: 0 auto;
     text-align: center;
+    font-family: "Tibetan Machine Uni";
+    color: #454545;
 }
 
 header {
     width: 30%;
     margin: 0 auto;
     margin-top: 2em;
-    background-color: dimgrey;
+    background-color: lightgray;
     border: 2px solid black;
     border-radius: 20px;
     box-shadow: black 3px 3px;
 }
 
 .quote-container {
-    width: 30%;
-    background-color: dimgrey;
+    width: 50%;
+    height: 300px;
+    background-color: lightgrey;
     margin: 0 auto;
-    margin-top: 2em;
+    margin-top: 30px;
     border: 2px solid black;
     border-radius: 10px;
     box-shadow: black 3px 3px;
+    position: relative;
+
+}
+.quote-text {
+    padding: 20px;
+}
+
+.quote-button {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
 }
 
 button {
@@ -31,12 +46,18 @@ button {
     padding: 15px;
     border-radius: 5px;
     box-shadow: black 3px 3px;
-    margin: 1em;
+
+
 
 }
 
 button:hover {
     background-color: chocolate;
+
+}
+
+button:active{
+    transform: translateY(3px);
 }
 
 
