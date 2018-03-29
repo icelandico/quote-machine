@@ -3,7 +3,7 @@ $(document).ready(function () {
 
 
     $.ajaxSetup({cache: false});
-    $("button").on("click", function () {
+    $(".quote").on("click", function () {
         $.getJSON(api, function (json) {
             var randomApi = Math.floor(Math.random()*json.length+1);
             $(".get-text").html('"'+ json[randomApi].quoteText +'"');
@@ -11,8 +11,12 @@ $(document).ready(function () {
 
                 })
     });
+    $(".tweet").on("click", function() {
+        window.open("https://twitter.com/intent/tweet?text= " + $(".get-text").text() + ' by ' + $(".author").text(), target="_blank");
+    })
 
 });
+
 
 
 
