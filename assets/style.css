@@ -7,30 +7,28 @@ body {
     background-color: #7f7f7f;
     margin: 0 auto;
     text-align: center;
-    font-family: "Tibetan Machine Uni";
+    font-family: "Tibetan Machine Uni", serif;
     color: #454545;
 
 }
 
 header {
-    width: 30%;
-    margin: 0 auto;
-    margin-top: 2em;
+    margin: 1% 40%;
     background-color: lightgray;
     border: 2px solid black;
     border-radius: 20px;
     box-shadow: black 3px 3px;
+    overflow: hidden;
 }
 
 .quote-container {
-    width: 50%;
     background-color: lightgrey;
-    margin: 0 auto;
-    margin-top: 30px;
+    margin: 1% 30%;
     border: 2px solid black;
     border-radius: 10px;
     box-shadow: black 3px 3px;
-    position: relative;
+    overflow: hidden;
+
 }
 
 .quote-text {
@@ -38,9 +36,6 @@ header {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-}
-.quote-text span {
-    margin-bottom: 70px;
 }
 
 .author {
@@ -51,10 +46,7 @@ header {
 }
 
 .quote-button {
-    position: absolute;
-    bottom: 20px;
-    left: 0;
-    right: 0;
+    margin-bottom: 20px;
     flex: 1;
 }
 
@@ -81,15 +73,18 @@ button.tweet:hover {
     background: #00aced;
 }
 
+footer {
+    padding: 0 20px;
+}
+
 .footer-container {
-    width: 25%;
-    height: 100px;
+    max-width: 500px;
+    min-height: 100px;
     background-color: lightgrey;
-    margin: 30px auto;
+    margin: 1% 40%;
     border: 2px solid black;
     border-radius: 10px;
     box-shadow: black 3px 3px;
-    position: relative;
 
 }
 .footer-container h5 {
@@ -97,14 +92,11 @@ button.tweet:hover {
 }
 
 .icons-container {
-    position: absolute;
-    bottom: 20px;
-    left: 0;
-    right: 0;
+    margin-bottom: 15px;
 }
 
 .icons-container a {
-    margin: 0 20px;
+    margin: 10px 10px;
 }
 
 a {
