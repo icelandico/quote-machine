@@ -16,7 +16,8 @@ $(document).ready(function () {
         var width = 300;
         var top = window.innerHeight-height;
         var left = window.innerHeight-width;
-        window.open("https://twitter.com/intent/tweet?text= " + $(".get-text").text() + ' by ' + $(".author").text(), target="_blank", 'location=yes, height=300,width=600, top='+top+', left='+left+', status=yes');
+        window.open("https://twitter.com/intent/tweet?text= " + $(".get-text").text() + ' by ' + $(".author").text(),
+            target="_blank", 'location=yes, height=300,width=600, top='+top+', left='+left+', status=yes');
     })
 
 });
