@@ -40,6 +40,15 @@ header {
     padding: 1em;
 }
 
+.animate {
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn{
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
 .author {
     font-weight: bold;
     font-style: italic;
