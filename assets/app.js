@@ -1,9 +1,5 @@
 const api = new XMLHttpRequest();
 var quoteApi = "https://raw.githubusercontent.com/4skinSkywalker/Database-Quotes-JSON/master/quotes.json";
-// var height = 550;
-// var width = 300;
-// var top = window.innerHeight-height;
-// var left = window.innerHeight-width;
 var getQuote = document.querySelector('.quote');
 var tweet = document.querySelector('.tweet');
 var quoteIn = document.querySelector('.get-text');
