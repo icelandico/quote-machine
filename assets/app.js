@@ -5,7 +5,6 @@ let tweet = document.querySelector('.tweet');
 let quoteIn = document.querySelector('.get-text');
 let quoteAuthor = document.querySelector('.author');
 
-
 function parse() {
     quoteIn.classList.remove('animate');
     quoteAuthor.classList.remove('animate');
@@ -32,16 +31,3 @@ function tweetQuote() {
 
 getQuote.addEventListener('click', parse);
 tweet.addEventListener('click', tweetQuote);
-
-
-
-
-
-
-
-
-
-
-
-
-
