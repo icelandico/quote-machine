@@ -1,9 +1,9 @@
 const api = new XMLHttpRequest();
-var quoteApi = "https://raw.githubusercontent.com/4skinSkywalker/Database-Quotes-JSON/master/quotes.json";
-var getQuote = document.querySelector('.quote');
-var tweet = document.querySelector('.tweet');
-var quoteIn = document.querySelector('.get-text');
-var quoteAuthor = document.querySelector('.author');
+const quoteApi = "https://raw.githubusercontent.com/4skinSkywalker/Database-Quotes-JSON/master/quotes.json";
+let getQuote = document.querySelector('.quote');
+let tweet = document.querySelector('.tweet');
+let quoteIn = document.querySelector('.get-text');
+let quoteAuthor = document.querySelector('.author');
 
 
 function parse() {
@@ -12,14 +12,13 @@ function parse() {
     api.open('GET', quoteApi, true);
     api.onload = function () {
         data = JSON.parse(this.response);
-        console.log(data);
         insertData(data);
     };
     api.send();
 }
 
 function insertData(data) {
-    var randomQuote = Math.floor(Math.random()* data.length + 1);
+    let randomQuote = Math.floor(Math.random()* data.length + 1);
     quoteIn.classList.add('animate');
     quoteAuthor.classList.add('animate');
     quoteIn.innerHTML = "\"" + data[randomQuote].quoteText + "\"";
