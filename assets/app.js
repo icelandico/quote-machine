@@ -3,16 +3,13 @@ const tweet = document.querySelector('.tweet');
 const quoteText = document.querySelector('.get-text');
 const quoteAuthor = document.querySelector('.author');
 
-function parse() {
+async function parse() {
   const quoteApi = "https://gist.githubusercontent.com/camperbot/5a022b72e96c4c9585c32bf6a75f62d9/raw/e3c6895ce42069f0ee7e991229064f167fe8ccdc/quotes.json";
   quoteText.classList.remove('animate');
   quoteAuthor.classList.remove('animate');
-  api.open('GET', quoteApi, true);
-  api.onload = function () {
-      data = JSON.parse(this.response);
-      insertData(data);
-  };
-  api.send();
+  const parse = await fetch(quoteApi);
+  const response = await parse.json();
+  insertData(response)
 }
 
 function insertData(data) {
@@ -28,9 +25,11 @@ function insertData(data) {
 function tweetQuote() {
   const windowHeight = window.innerHeight / 2;
   const windowWidth = window.innerWidth / 2;
-  window.open("https://twitter.com/intent/tweet?text= " +  quoteText.innerText + ' by ' + quoteAuthor.innerText,
+  const quote = quoteText.innerText;
+  const author = quoteAuthor.innerText;
+  window.open(`https://twitter.com/intent/tweet?text=${quote} by ${author}`,
   target="_blank", `location=yes, status=yes, resizable=yes,top=${windowHeight},left=${windowWidth},width=400,height=400`);
-  }
+}
 
 getQuote.addEventListener('click', parse);
 tweet.addEventListener('click', tweetQuote);
